@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>结婚纪念日</title>
+		<title>洪礼卫&刘欢的家</title>
 		<style type="text/css">
 			html {
 			  display: grid;
@@ -32,7 +32,7 @@
 			  color: #F6F4F3;
 			}
 
-			#timer {
+			#timer,#timer2 {
 			  color: #F6F4F3;
 			  text-align: center;
 			  text-transform: uppercase;
@@ -81,24 +81,21 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>洪礼卫 刘欢</h1>
+			<h1>洪礼卫&刘欢的家</h1>
 			<h1>结婚纪念日</h1>
 			<div id="timer"></div>
-		</div>	
+			<h1>小番茄诞生日</h1>
+			<div id="timer2"></div>
+		</div>
+		
 	</body>
 	<script type="text/javascript">
 			var weddingDate = new Date("February 8, 2019 12:00:00").getTime();
 
 			// countdown
 			var timer = setInterval(function() {
-
-			  // get today's date
 			  var today = new Date().getTime();
-
-			  // get the difference
 			  var diff = today - weddingDate;
-
-			  // math
 			  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 			  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -107,15 +104,39 @@
 			  // display
 			  document.getElementById("timer").innerHTML =
 				"<div class=\"days\"> \
-			  <div class=\"numbers\">" + days + "</div>days</div> \
-			<div class=\"hours\"> \
-			  <div class=\"numbers\">" + hours + "</div>hours</div> \
-			<div class=\"minutes\"> \
-			  <div class=\"numbers\">" + minutes + "</div>minutes</div> \
-			<div class=\"seconds\"> \
-			  <div class=\"numbers\">" + seconds + "</div>seconds</div> \
-			</div>";
+				  <div class=\"numbers\">" + days + "</div>days</div> \
+				<div class=\"hours\"> \
+				  <div class=\"numbers\">" + hours + "</div>hours</div> \
+				<div class=\"minutes\"> \
+				  <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+				<div class=\"seconds\"> \
+				  <div class=\"numbers\">" + seconds + "</div>seconds</div> \
+				</div>";
+			}, 1000);
+		</script>
+		<script type="text/javascript">
+			var birthdayDate = new Date("July 31, 2020 21:00:00").getTime();
 
+			// countdown
+			var timer = setInterval(function() {
+			  var today = new Date().getTime();
+			  var diff = today - birthdayDate;
+			  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+			  // display
+			document.getElementById("timer2").innerHTML =
+				"<div class=\"days\"> \
+				  <div class=\"numbers\">" + days + "</div>days</div> \
+				<div class=\"hours\"> \
+				  <div class=\"numbers\">" + hours + "</div>hours</div> \
+				<div class=\"minutes\"> \
+				  <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+				<div class=\"seconds\"> \
+				  <div class=\"numbers\">" + seconds + "</div>seconds</div> \
+				</div>";
 			}, 1000);
 		</script>
 </html>
